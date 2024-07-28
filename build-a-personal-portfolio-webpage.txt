@@ -1,0 +1,212 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maname&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Playwrite+PE:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zain:wght@200;300;400;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maname&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Playwrite+PE:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zain:wght@200;300;400;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/5abb2a26fb.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Personal Portfolio</title>
+  </head>
+
+  <body>
+
+    <nav id="navbar">
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#work">Work</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+    <section id="welcome-section">
+      <div id="about">
+        <h1>Hello, my name is Mia.</h1>
+        <h4>And, this is my portfolio.</h4>
+      </div>
+    </section>
+    <section id="projects">
+      <div id="work">
+        <div class="project-tile">
+          <a class="cookie" href="https://github.com/mialin-code/Cookie-Website.git">Cookie Website</a>
+        </div>
+        <div class="project-tile">
+          <a>Coming Soon</a>
+        </div>
+        <div class="project-tile">
+          <a>Coming Soon</a>
+        </div>
+        <div class="project-tile">
+          <a>Coming Soon</a>
+        </div>
+      </div>
+    </section>
+    <section id="end-section">
+      <div id="contact">
+        <a
+          id="profile-link"
+          target="_blank"
+          href="https://github.com/mialin-code/Personal-Website.git"
+          ><i class="fab fa-github"></i> Github</a
+        >
+        <hr />
+        <a
+          id="profile-link"
+          target="_blank"
+          href="https://www.linkedin.com/in/mia-m-199668226"
+          ><i class="fab fa-linkedin"></i> Linkedin</a
+        >
+      </div>
+    </section>
+  </body>
+</html>
+
+
+** end of undefined **
+
+** start of undefined **
+
+/* Global Styles */
+*, ::before, ::after {
+  box-sizing: border-box;
+  scrollbar-color: var(--personal-color1) var(--personal-color);
+   margin: 0;
+   padding: 0;
+}
+
+:root {
+  --personal-color: white;
+  --personal-color1: black;
+}
+
+html {
+  background-color: var(--personal-color1);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  padding: 0;
+  color: var(--personal-color);
+  margin: 20px;
+}
+
+/* Typography */
+h1, h4 {
+  text-align: center;
+}
+
+h4 {
+  font-weight: normal;
+  font-style: italic;
+  opacity: 0.5;
+  margin-top: 20px;
+}
+
+/* Navigation Bar */
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98.5%;
+  background: var(--personal-color);
+  z-index: 10;
+  padding: 20px 0;
+  margin: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.nav-link {
+  color: var(--personal-color1);
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.nav-link:hover {
+  color: var(--personal-color);
+  background-color: var(--personal-color1);
+  border-radius: 5px;
+  padding: 2px;
+}
+
+/* Welcome Section */
+#welcome-section {
+  margin: 20%;
+  font-size: 180%;
+  display: flex-end;
+  position: sticky;
+  flex-direction: column;
+}
+
+/* Projects Section */
+#projects {
+  background-color: var(--personal-color);
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center;
+  border-radius: 5px;
+  
+}
+
+.project-tile {
+  background-color: var(--personal-color1);
+  padding: 10px 40px;
+  margin: 10px; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  border-radius: 10px;
+  width: 105%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.cookie {
+  text-decoration: none;
+  color: var(--personal-color);
+  font-weight: bold;
+}
+
+/* End Section */
+#end-section {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  z-index: 3;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+#profile-link {
+  color: var(--personal-color1);
+  text-decoration: none;
+  font-size: 40px;
+}
+
+/* Media Queries */
+@media (max-width: 780px) {
+  body {
+    flex-direction: column;
+  }
+}
+
+
+** end of undefined **
+
