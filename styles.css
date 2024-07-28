@@ -1,0 +1,130 @@
+/* Global Styles */
+*, ::before, ::after {
+    box-sizing: border-box;
+    scrollbar-color: var(--personal-color1) var(--personal-color);
+     margin: 0;
+     padding: 0;
+  }
+  
+  :root {
+    --personal-color: white;
+    --personal-color1: black;
+  }
+  
+  html {
+    background-color: var(--personal-color1);
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "Orbitron", sans-serif;
+    padding: 0;
+    color: var(--personal-color);
+    margin: 20px;
+  }
+  
+  /* Typography */
+  h1, h4 {
+    text-align: center;
+  }
+  
+  h4 {
+    font-weight: normal;
+    font-style: italic;
+    opacity: 0.5;
+    margin-top: 20px;
+  }
+  
+  /* Navigation Bar */
+  #navbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98.5%;
+    background: var(--personal-color);
+    z-index: 10;
+    padding: 20px 0;
+    margin: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  
+  .nav-link {
+    color: var(--personal-color1);
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  .nav-link:hover {
+    color: var(--personal-color);
+    background-color: var(--personal-color1);
+    border-radius: 5px;
+    padding: 2px;
+  }
+  
+  /* Welcome Section */
+  #welcome-section {
+    margin: 20%;
+    font-size: 180%;
+    display: flex-end;
+    position: sticky;
+    flex-direction: column;
+  }
+  
+  /* Projects Section */
+  #projects {
+    background-color: var(--personal-color);
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+    border-radius: 5px;
+    
+  }
+  
+  .project-tile {
+    background-color: var(--personal-color1);
+    padding: 10px 40px;
+    margin: 10px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border-radius: 10px;
+    width: 105%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .cookie {
+    text-decoration: none;
+    color: var(--personal-color);
+    font-weight: bold;
+  }
+  
+  /* End Section */
+  #end-section {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    z-index: 3;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  
+  #profile-link {
+    color: var(--personal-color1);
+    text-decoration: none;
+    font-size: 40px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 780px) {
+    body {
+      flex-direction: column;
+    }
+  }
+  
