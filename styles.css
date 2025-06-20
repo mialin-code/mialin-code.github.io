@@ -1,4 +1,3 @@
-/* Global Styles */
 *, ::before, ::after {
     box-sizing: border-box;
     scrollbar-color: var(--personal-color1) var(--personal-color);
@@ -23,7 +22,6 @@
     margin: 20px;
   }
   
-  /* Typography */
   h1, h4 {
     text-align: center;
   }
@@ -35,7 +33,6 @@
     margin-top: 20px;
   }
   
-  /* Navigation Bar */
   #navbar {
     display: flex;
     justify-content: flex-end;
@@ -65,7 +62,6 @@
     padding: 2px;
   }
   
-  /* Welcome Section */
   #welcome-section {
     margin: 20%;
     font-size: 180%;
@@ -74,7 +70,6 @@
     flex-direction: column;
   }
   
-  /* Projects Section */
   #projects {
     background-color: var(--personal-color);
     padding: 50px;
@@ -103,8 +98,13 @@
     color: var(--personal-color);
     font-weight: bold;
   }
-  
-  /* End Section */
+
+  .pokedex {
+    text-decoration: none;
+    color: var(--personal-color);
+    font-weight: bold;
+  }
+
   #end-section {
     background-color: white;
     display: flex;
@@ -121,7 +121,6 @@
     font-size: 40px;
   }
   
-  /* Media Queries */
   @media (max-width: 780px) {
     body {
       flex-direction: column;
