@@ -105,6 +105,12 @@
     font-weight: bold;
   }
 
+  .cash {
+    text-decoration: none;
+    color: var(--personal-color);
+    font-weight: bold;
+  }
+
   #end-section {
     background-color: white;
     display: flex;
