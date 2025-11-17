@@ -1,70 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MIA — Blog</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envi Wai — Blog</title>
 
-  <!-- Modern fonts -->
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
-  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root {
+      --navy: #0A1A2F;
+      --beige: #F3EDE2;
+      --accent: #314A6E;
+      --text-dark: #1A1A1A;
+      --text-light: #fdfdfd;
+    }
+
+    body {
+      margin: 0;
+      background: var(--beige);
+      color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.65;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background: var(--navy);
+      color: var(--text-light);
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar a {
+      color: var(--text-light);
+      text-decoration: none;
+      margin-left: 24px;
+      font-weight: 500;
+      transition: opacity 0.2s ease;
+    }
+    .navbar a:hover { opacity: 0.75; }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    /* HEADER HERO */
+    .hero {
+      padding: 80px 40px;
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: var(--navy);
+    }
+
+    .hero p {
+      color: var(--navy);
+      opacity: 0.85;
+      font-size: 1.15rem;
+    }
+
+    /* BLOG SECTION */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      padding: 40px;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .post-card {
+      background: white;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .post-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .post-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      color: var(--navy);
+    }
+
+    .post-tag {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--text-light);
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .coming-soon {
+      font-style: italic;
+      opacity: 0.6;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      color: var(--text-light);
+      text-align: center;
+      padding: 40px;
+      margin-top: 50px;
+    }
+  </style>
 </head>
+
 <body>
-  <header>
-    <div class="logo">MIA Blog</div>
 
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Categories</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h1>Thoughtful Picks</h1>
-    <p>A curated corner of the internet—style, lifestyle, essentials, all in one place.</p>
-
-    <div class="social-links">
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logo">Envi Wai</div>
+    <div class="links">
       <a href="https://linktr.ee/envi_wai" target="_blank">Linktree</a>
       <a href="https://www.pinterest.com/envi_wai/" target="_blank">Pinterest</a>
     </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Welcome to the Blog</h1>
+    <p>A curated corner of finds, favorites, and inspiration. New posts are on the way — stay tuned.</p>
   </section>
 
-  <section class="posts">
-    <!-- Post 1 -->
-    <article class="post-card">
-      <div class="tag">Coming Soon</div>
-      <h2>Everyday Essentials I Actually Use</h2>
-      <p>Curated picks for daily living—items that blend quality with good design. Post drops soon.</p>
-      <button class="btn disabled">Read More</button>
-    </article>
+  <!-- BLOG POSTS -->
+  <section class="blog-grid">
 
-    <!-- Post 2 -->
-    <article class="post-card">
-      <div class="tag">Coming Soon</div>
-      <h2>Red & Mustard Aesthetic Moodboard</h2>
-      <p>A visual dive into bold warm tones and why they work so well in modern branding.</p>
-      <button class="btn disabled">Read More</button>
-    </article>
+    <div class="post-card">
+      <div class="post-tag">Lifestyle</div>
+      <div class="post-title">Fall Essentials Guide</div>
+      <p class="coming-soon">Post coming soon…</p>
+    </div>
 
-    <!-- Post 3 -->
-    <article class="post-card">
-      <div class="tag">Coming Soon</div>
-      <h2>My Favorite Finds This Month</h2>
-      <p>Little things that sparked joy—from home items to unexpected gems.</p>
-      <button class="btn disabled">Read More</button>
-    </article>
+    <div class="post-card">
+      <div class="post-tag">Style</div>
+      <div class="post-title">Minimal Wardrobe Staples</div>
+      <p class="coming-soon">Post coming soon…</p>
+    </div>
+
+    <div class="post-card">
+      <div class="post-tag">Home</div>
+      <div class="post-title">Cozy Aesthetic Decor Finds</div>
+      <p class="coming-soon">Post coming soon…</p>
+    </div>
+
+    <div class="post-card">
+      <div class="post-tag">Beauty</div>
+      <div class="post-title">Skincare Routine That *Actually* Works</div>
+      <p class="coming-soon">Post coming soon…</p>
+    </div>
+
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>© 2025 ENVI Blog. All rights reserved.</p>
+    © 2025 Envi Wai — All rights reserved.
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // A subtle scroll fade-in for cards
+    const cards = document.querySelectorAll('.post-card');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateY(0)";
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => {
+      card.style.opacity = "0";
+      card.style.transform = "translateY(20px)";
+      card.style.transition = "all 0.6s ease";
+      observer.observe(card);
+    });
+  </script>
+
 </body>
 </html>
-
