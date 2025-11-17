@@ -1,15 +1,16 @@
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href').slice(1);
-      const target = document.getElementById(targetId);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-  
-        target.classList.remove('blink-highlight');
-        void target.offsetWidth;
-        target.classList.add('blink-highlight');
-      }
-    });
+// Example small interactions
+document.querySelectorAll(".disabled").forEach(btn => {
+  btn.addEventListener("click", () => {
+    alert("This post is coming soon!");
   });
-  
+});
+
+// Sticky header glow on scroll
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  if (window.scrollY > 20) {
+    header.style.boxShadow = "0 4px 10px rgba(0,0,0,0.08)";
+  } else {
+    header.style.boxShadow = "none";
+  }
+});
