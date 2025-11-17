@@ -1,3 +1,5 @@
-// Currently no interactive features needed.
-// Placeholder for future blog functionality
-console.log("Envi Wai Blog loaded");
+document.addEventListener('DOMContentLoaded', () => {
+  const profile = document.querySelector('.profile-window');
+  profile.addEventListener('mouseenter', () => profile.style.transform = 'translateY(-6px) scale(1.01)');
+  profile.addEventListener('mouseleave', () => profile.style.transform = '');
+});
