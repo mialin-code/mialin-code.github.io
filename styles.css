@@ -1,149 +1,161 @@
-/* -------------------------
-   GLOBAL / RESET
--------------------------- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+  --bg-image: url('https://i.imgur.com/3ZQ3j6k.jpg');
+  --accent: #1659a2;
+  --card: #1f62a8;
+  --light: #f3fbff;
+  --pixel: 'Press Start 2P', monospace;
 }
 
-body {
-    font-family: "Inter", sans-serif;
-    background: #e7e2c4; /* soft beige background */
-    color: #333;
-    line-height: 1.6;
+*{box-sizing:border-box}
+html,body{
+  margin:0;
+  background:linear-gradient(#bde0ff,#e8f5ff);
+  font-family:Inter, sans-serif;
 }
 
-/* Containers */
-.container {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image: var(--bg-image);
+  background-size:cover;
+  background-position:center;
+  opacity:0.1;
+  z-index:0;
 }
 
-/* -------------------------
-   HEADER
--------------------------- */
-header {
-    background: #f5b5b5; /* Loobylu header pink */
-    border-bottom: 3px solid #000;
-    padding: 20px 0;
+.page{
+  max-width:900px;
+  margin:30px auto;
+  padding:20px;
+  position:relative;
+  z-index:2;
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* window top bar */
+.top-bar{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:10px 16px;
+  border:6px solid #163e68;
+  border-radius:10px 10px 0 0;
+  background:#ffffffdd;
+  box-shadow: 6px 8px 0 rgba(0,0,0,0.18);
 }
 
-header h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 2rem;
-    letter-spacing: 1px;
-    color: #fff;
-    text-shadow: 1px 1px #333;
+.title{
+  font-family:var(--pixel);
+  font-size:14px;
+  margin:0;
+  color:#1a3a6a;
+  letter-spacing:2px;
 }
 
-nav ul {
-    display: flex;
-    gap: 20px;
+.win-dots{display:flex;gap:8px}
+.dot{width:14px;height:14px;border-radius:50%;border:2px solid #0002}
+.red{background:#ff4d4d}
+.yellow{background:#ffd24d}
+.green{background:#6bff83}
+
+/* main card */
+.content-box{
+  border:6px solid #163e68;
+  background:#ffffffee;
+  padding:0;
+  border-radius:0 0 10px 10px;
+  box-shadow:6px 8px 0 rgba(0,0,0,0.18);
 }
 
-nav a {
-    text-decoration: none;
-    font-weight: 600;
-    color: #5c0000; /* dark reddish text like links in the screenshot */
+.profile-window{
+  background:linear-gradient(180deg,#1e5aa1,#275fae);
+  border:6px solid #163e68;
+  margin:18px;
+  border-radius:10px;
+  padding:20px;
+  display:flex;
+  gap:20px;
+  color:white;
+  box-shadow:8px 10px 0 rgba(0,0,0,0.2);
 }
 
-nav a:hover {
-    text-decoration: underline;
+.domain{
+  font-family:var(--pixel);
+  font-size:12px;
+  margin:0 0 10px;
+  color:#c6e7ff;
 }
 
-/* -------------------------
-   HERO SECTION
--------------------------- */
-.hero {
-    background: #fff;
-    margin-top: 30px;
-    padding: 40px 20px;
-    border: 2px solid #d49b9b;
-    border-radius: 4px;
-    box-shadow: 0 0 0 3px #fff, 
-                0 0 0 4px #000; /* layered outline like Loobylu boxes */
-    text-align: center;
+.name{
+  font-family:var(--pixel);
+  font-size:22px;
+  margin:0 0 12px;
+  color:white;
 }
 
-.hero h2 {
-    font-family: "Playfair Display", serif;
-    color: #c75b5b;
-    margin-bottom: 10px;
+.bio{
+  font-size:13px;
+  line-height:1.5;
+  color:#eef6ff;
 }
 
-.hero p {
-    font-size: 1.1rem;
+.links{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top:20px;
 }
 
-/* -------------------------
-   POSTS
--------------------------- */
-.posts {
-    margin-top: 50px;
-    padding-bottom: 60px;
+/* buttons */
+.btn{
+  display:block;
+  background:white;
+  padding:12px 14px;
+  border-radius:8px;
+  color:#163e68;
+  text-decoration:none;
+  font-family:var(--pixel);
+  font-size:12px;
+  text-align:center;
+  border:4px solid #163e68;
+  transition:0.2s;
 }
 
-.posts h3 {
-    font-family: "Playfair Display", serif;
-    font-size: 1.8rem;
-    color: #c75b5b;
-    margin-bottom: 20px;
+.btn:hover{
+  background:#cce6ff;
+  transform:translateY(-3px);
 }
 
-.post-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
+/* avatar */
+.avatar-area{
+  width:150px;
+  text-align:center;
+  position:relative;
 }
 
-.post-card {
-    background: #fff;
-    padding: 20px;
-    border: 2px solid #d49b9b;
-    border-radius: 4px;
-    box-shadow: 0 0 0 3px #fff,
-                0 0 0 4px #000;
+.avatar{
+  width:120px;height:120px;
+  border-radius:50%;
+  background:white;
 }
 
-.post-image {
-    background: #f3e9e9; /* soft placeholder pink */
-    height: 150px;
-    border: 2px solid #d49b9b;
-    border-radius: 4px;
-    margin-bottom: 15px;
+.crown{
+  position:absolute;
+  top:-8px;
+  right:20px;
+  font-size:20px;
 }
 
-.post-card h4 {
-    font-family: "Playfair Display", serif;
-    color: #5c0000;
-    margin-bottom: 8px;
+/* bottom shadow */
+.bottom-shadow{
+  height:18px;
+  background:linear-gradient(90deg,transparent,rgba(0,0,0,0.1),transparent);
+  margin-top:10px;
 }
 
-.post-card p {
-    font-size: 0.95rem;
-    color: #444;
-}
-
-/* -------------------------
-   FOOTER
--------------------------- */
-footer {
-    background: #f5b5b5;
-    border-top: 3px solid #000;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 50px;
-}
-
-footer p {
-    font-size: 0.9rem;
-    color: #5c0000;
+@media(max-width:700px){
+  .profile-window{
+    flex-direction:column;
+    text-align:center;
+  }
 }
